@@ -1,0 +1,7 @@
+FROM redis
+
+COPY redis.conf /usr/local/etc/redis.conf
+
+CMD ["redis-server", "/usr/local/etc/redis.conf"]
+
+# сборка образа: `docker build -t redis-aof .`

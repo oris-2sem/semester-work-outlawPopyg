@@ -1,0 +1,24 @@
+rsa:
+    public-key: classpath:certs/public.pem
+    private-key: classpath:certs/private.pem
+
+spring:
+    sql:
+        init:
+            mode: always
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        username: ${SPRING_DATASOURCE_USERNAME}
+        password: ${SPRING_DATASOURCE_PASSWORD}
+        url: ${SPRING_DATASOURCE_URL}
+        hikari:
+            maximum-pool-size: 20
+    jpa:
+        hibernate:
+            ddl-auto: update
+        defer-datasource-initialization: true
+
+server:
+    port: 8081
+
+

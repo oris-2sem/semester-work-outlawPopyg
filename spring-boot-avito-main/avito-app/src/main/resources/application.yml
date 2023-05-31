@@ -1,0 +1,18 @@
+rsa:
+    public-key: classpath:certs/public.pem
+
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        username: postgres
+        password: outlaw
+        url: jdbc:postgresql://localhost:5432/avito_db
+        hikari:
+            maximum-pool-size: 20
+    jpa:
+        hibernate:
+            ddl-auto: update
+    liquibase:
+        change-log: classpath:/config/liquibase/master.yml
+
+

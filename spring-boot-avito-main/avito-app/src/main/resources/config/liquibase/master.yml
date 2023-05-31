@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: add-extension.yml
+      relativeToChangelogFile: true

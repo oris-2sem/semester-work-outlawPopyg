@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      author: "Kalim Ahmetchin"
+      id: "001"
+      changes:
+        - sqlFile:
+            path: uuid-extension.sql
+            relativeToChangelogFile: true
